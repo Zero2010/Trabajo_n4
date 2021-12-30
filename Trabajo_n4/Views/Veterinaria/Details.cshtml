@@ -1,0 +1,35 @@
+﻿@model Trabajo_n4.Models.servicio_tipos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>servicio_tipos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in ViewBag.Detalle)
+        {
+            <dt>
+                Id
+            </dt>
+
+            <dd>
+                @item.id
+            </dd>
+
+            <dt>
+                Nombre
+            </dt>
+
+            <dd>
+                @item.nombre
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Regresar", "Index")
+</div>
